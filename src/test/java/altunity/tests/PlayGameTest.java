@@ -13,6 +13,8 @@ import org.junit.Test;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import ro.altom.altunitytester.AltUnityDriver;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
@@ -34,7 +36,7 @@ public class PlayGameTest {
 
         String deviceName = "localhost:7000";
 
-        String app = "/Users/eyalyovel/Documents/github/customers/AltUnity/alttrashcat_latest.apk";
+        String app = System.getProperty("user.dir") + "/app/alttrashcat_latest.apk";
         String url = "http://localhost:4723/wd/hub";
 
         AltUnityDriver.setupPortForwarding("android", deviceName, 13001, 13000);
